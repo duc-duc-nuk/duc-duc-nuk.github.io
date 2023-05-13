@@ -1,0 +1,25 @@
+<script>
+  // Array of website URLs
+const websites = [
+  'https://frontend1.vercel.app',
+  'https://frontend2.onrender.com',
+  'https://frontend3.github.io',
+  'https://frontend4.com'
+];
+
+// Function to randomly choose a website and load it
+function loadRandomWebsite() {
+  // Generate a random index within the range of the websites array
+  const randomIndex = Math.floor(Math.random() * websites.length);
+  
+  // Get the randomly chosen website URL
+  const randomWebsite = websites[randomIndex];
+  
+  // Redirect the current page to the randomly chosen website
+  window.location.href = randomWebsite;
+}
+
+// Call the function to load a random website
+loadRandomWebsite();
+
+</script>
