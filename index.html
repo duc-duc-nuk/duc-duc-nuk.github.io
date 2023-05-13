@@ -1,0 +1,39 @@
+// Define three sets of website URLs
+const websiteSets = [
+  [
+    'https://example1.onrender.com',
+    'https://example2.onrender.com',
+    'https://example3.onrender.com'
+  ],
+  [
+    'https://example1.vercel.app',
+    'https://example2.vercel.app',
+    'https://example3.vercel.app'
+  ],
+  [
+    'https://example1.github.io',
+    'https://example2.github.io',
+    'https://example3.github.io'
+  ]
+];
+
+// Set the index of the website set to use. 0 for onrender 1 for vercel and 3 for github
+const chosenSetIndex = 0; // Change this value to choose the set
+
+// Function to randomly choose a website and load it
+function loadRandomWebsite() {
+  // Get the chosen website set
+  const websiteSet = websiteSets[chosenSetIndex];
+
+  // Generate a random index to choose a website URL from the set
+  const urlIndex = Math.floor(Math.random() * websiteSet.length);
+
+  // Get the randomly chosen website URL
+  const randomWebsite = websiteSet[urlIndex];
+
+  // Redirect the current page to the randomly chosen website
+  window.location.href = randomWebsite;
+}
+
+// Call the function to load a random website
+loadRandomWebsite();
